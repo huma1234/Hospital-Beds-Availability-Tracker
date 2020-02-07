@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".HospitalSelection">
+
+    <TextView
+        android:id="@+id/unamelogo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/unamelogo"
+        android:textColor="@android:color/background_dark" />
+
+    <TextView
+        android:id="@+id/uname"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="RabbiyaSheikh"
+        android:textColor="@android:color/background_dark" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="WANNA ADMIT?"
+        android:textColor="@android:color/background_dark"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/HospitalName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="FIND A HOSPITAL"
+        android:textColor="@android:color/black"
+        android:textSize="30sp" />
+
+    <Spinner
+        android:id="@+id/selectHospitals"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/darker_gray"
+        android:entries="@array/hospitals"
+        android:text="TextView" />
+
+    <Button
+        android:id="@+id/Selected"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/shape"
+        android:onClick="SelectHospitalAction"
+        android:text="Selected"
+        android:textSize="24sp" />
+
+
+</LinearLayout>

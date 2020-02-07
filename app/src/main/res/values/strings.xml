@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string-array name="hospitals">
+        <item>Liaquat National Hospital</item>
+        <item>Ziauddin Hospital</item>
+        <item>Agha Khan Hospital</item>
+        <item>Patel Hospital</item>
+        <item>Tabba Heart Institute</item>
+        <item>South City Hospital</item>
+        <item>Memon Medical</item>
+        <item>Fatimiyah Hospital in Karachi</item>
+        <item> Abbasi Shaheed Hospital</item>
+        <item> Institute of Infection Diseases</item>
+        <item>Nasir Hussein Shaheed Hospital</item>
+    </string-array>
+</resources>
