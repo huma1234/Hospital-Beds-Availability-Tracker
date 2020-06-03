@@ -46,7 +46,7 @@ public class BedAvalability extends AppCompatActivity {
     ImageView imageB4;
     ImageView imageB5;
     CheckBox bedb1chk;
-String RefreshToken;
+    String RefreshToken;
     String ACCESS_TOKEN =  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1ODI5NDUxMTEsImlhdCI6MTU4MjkzNzkxMSwidXNyIjoiQWJkdWxSZWhtYW4ifQ.YYUAmAwqsPWAvWW0lyH0SqUsGRpninqIiTUSiZVW9LI";
     String UserName = "Mani";
     String PassWord = "password";
@@ -66,7 +66,7 @@ String RefreshToken;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bed_avalability);
-       // fetchBlogs("${your original access token here}");
+        // fetchBlogs("${your original access token here}");
         bedb1chk=findViewById(R.id.bedb1chk) ;
         HospitalName=findViewById(R.id.HospitalName);
         st=getIntent().getExtras().getString("Value");
@@ -97,56 +97,56 @@ String RefreshToken;
 
     }
 
-   void getAccessAndRefreshToken() {
-       mRequestQueue = Volley.newRequestQueue(this);
-       JsonObjectRequest AccessRefreshTokenRequest = new JsonObjectRequest(Request.Method.POST, tokenUrl, null,
-               new Response.Listener<JSONObject>() {
+    void getAccessAndRefreshToken() {
+        mRequestQueue = Volley.newRequestQueue(this);
+        JsonObjectRequest AccessRefreshTokenRequest = new JsonObjectRequest(Request.Method.POST, tokenUrl, null,
+                new Response.Listener<JSONObject>() {
 
-                   @Override
-                   public void onResponse(JSONObject response) {
+                    @Override
+                    public void onResponse(JSONObject response) {
 
-               try {
-
-
-                   ACCESS_TOKEN = (String)response.get("access_token");
-                   RefreshToken=(String)response.get("refresh_token");
-
-               } catch (JSONException e) {
-                   // this will never happen but if so, show error to user.
-               }
-           }
-       }, new Response.ErrorListener() {
-           @Override
-           public void onErrorResponse(VolleyError error) {
-               // show error to user. refresh failed.
-               Log.e("Error on getting token ", new String(error.networkResponse.data));
-           }
-       })
-       {
-
-           @Override
-           public Map<String, String> getHeaders() throws AuthFailureError {
-               Map<String, String> params = new HashMap<String, String>();
-               //  params.put("Content-Type", "application/x-www-form-urlencoded");
+                        try {
 
 
-               return params;
+                            ACCESS_TOKEN = (String)response.get("access_token");
+                            RefreshToken=(String)response.get("refresh_token");
 
-           }
+                        } catch (JSONException e) {
+                            // this will never happen but if so, show error to user.
+                        }
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                // show error to user. refresh failed.
+                Log.e("Error on getting token ", new String(error.networkResponse.data));
+            }
+        })
+        {
 
-           //Pass Your Parameters here
-           @Override
-           protected Map<String, String> getParams() {
-               Map<String, String> params = new HashMap<String, String>();
-
-               params.put("UserName", UserName);
-               params.put("PassWord", PassWord);
-               return params;
-           }
-       };
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                Map<String, String> params = new HashMap<String, String>();
+                //  params.put("Content-Type", "application/x-www-form-urlencoded");
 
 
-       queue.add( AccessRefreshTokenRequest);}
+                return params;
+
+            }
+
+            //Pass Your Parameters here
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> params = new HashMap<String, String>();
+
+                params.put("UserName", UserName);
+                params.put("PassWord", PassWord);
+                return params;
+            }
+        };
+
+
+        queue.add( AccessRefreshTokenRequest);}
 
     public void getdatafromApi()
     {
@@ -186,16 +186,16 @@ String RefreshToken;
             public void onErrorResponse(VolleyError error) {
                 Log.e("Rest Response", error.toString());
                 if (error.networkResponse.statusCode == 401) {
-                   refreshAccessToken();
+                    refreshAccessToken();
 
-               }
-           }
+                }
+            }
         }
         ) {
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 Map<String, String> params = new HashMap<String, String>();
-             //   params.put("Content-Type", "application/json;");
+                //   params.put("Content-Type", "application/json;");
                 params.put("Authorization", "Bearer " + ACCESS_TOKEN);
 
                 return params;
@@ -225,12 +225,12 @@ String RefreshToken;
     void refreshAccessToken() {
         JSONObject params = new JSONObject();
         try {
-           // params.put("client_id", "${your client id here}");
-          //  params.put("client_secret", "${your client secret here}");
-           // params.put("refresh_token", "${your refresh token here}");
+            // params.put("client_id", "${your client id here}");
+            //  params.put("client_secret", "${your client secret here}");
+            // params.put("refresh_token", "${your refresh token here}");
             params.put("refresh_token",RefreshToken);
             params.put("grant_type",RefreshToken);
-        //    params.put("Content-Type", "application/x-www-form-urlencoded");
+            //    params.put("Content-Type", "application/x-www-form-urlencoded");
         } catch (JSONException ignored) {
             // never thrown in this case
         }
