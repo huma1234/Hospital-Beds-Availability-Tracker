@@ -1,157 +1,253 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/linear"
+    android:padding="20dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".BedAvalability" >
+    tools:context=".BedAvalability">
 
-    <TextView
-        android:id="@+id/unamelogo"
-        android:layout_width="50dp"
-        android:layout_height="30dp"
-        android:background="@drawable/unamelogo"
-        android:textColor="@android:color/background_dark" />
-
-    <TextView
-        android:id="@+id/uname"
-        android:layout_width="wrap_content"
-        android:layout_height="20dp"
-        android:text="RabbiyaSheikh"
-        android:textColor="@android:color/background_dark" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="80dp"
-        android:text="Avalability of beds at"
-        android:textColor="@android:color/background_dark"
-        android:textSize="18sp" />
-
-    <TextView
-        android:id="@+id/HospitalName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        android:paddingLeft="80dp"
-        android:text="Agha Khan Hospital"
-        android:textColor="@android:color/background_dark"
-        android:textSize="18sp" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:visibility="visible">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:paddingLeft="80dp"
+            android:text="Avalability of beds at"
+            android:textColor="@android:color/background_dark"
+            android:textSize="18sp" />
 
-            <TextView
-
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:text="ID:B1"
-                android:textColor="@android:color/background_dark"
-                android:textSize="12sp" />
-
-            <ImageView
-                android:id="@+id/imageB1"
-                android:layout_width="150dp"
-                android:layout_height="70dp"
-                android:layout_marginTop="10dp"
-                app:srcCompat="@drawable/bed1" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/HospitalName"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
 
-            <TextView
-
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:text="ID:B2"
-                android:textColor="@android:color/background_dark"
-                android:textSize="12sp" />
-
-            <ImageView
-                android:id="@+id/imageB2"
-                android:layout_width="150dp"
-                android:layout_height="70dp"
-                android:layout_marginTop="10dp"
-                app:srcCompat="@drawable/bed1" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:text="ID:B3"
-                android:textColor="@android:color/background_dark"
-                android:textSize="10sp" />
-
-            <ImageView
-                android:id="@+id/imageB3"
-                android:layout_width="150dp"
-                android:layout_height="70dp"
-                android:layout_marginTop="10dp"
-                app:srcCompat="@drawable/bed1" />
-        </LinearLayout>
+            android:paddingLeft="80dp"
+            android:text="   Agha Khan Hospital"
+            android:textColor="@android:color/background_dark"
+            android:textSize="18sp" />
 
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <TextView
-
+            <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:text="ID:B4"
-                android:textColor="@android:color/background_dark"
-                android:textSize="12sp" />
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="ID:B1"
+                    android:gravity="center"
+                    android:background="@drawable/ic_label_black_24dp"
+                    android:textColor="#ffffff"
+                    android:textSize="12sp" />
+                <LinearLayout
+                    android:paddingLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/imageB1"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@drawable/bed1" />
 
-            <ImageView
-                android:id="@+id/imageB4"
-                android:layout_width="150dp"
-                android:layout_height="70dp"
-                android:layout_marginTop="10dp"
-                app:srcCompat="@drawable/bed1" />
+                <CheckBox
+                    android:layout_marginLeft="20dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/bedb1chk"
+                    android:checked="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bed is not available" />
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginBottom="7.5dp"
+                android:background="#d3d3d3" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="ID:B2"
+                    android:gravity="center"
+                    android:background="@drawable/ic_label_black_24dp"
+                    android:textColor="#ffffff"
+                    android:textSize="12sp" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/imageB2"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@drawable/bed1" />
+
+                <CheckBox
+                    android:layout_marginLeft="20dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/bedb2chk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bed is available" />
+            </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginBottom="7.5dp"
+                android:background="#d3d3d3" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:gravity="center"
+                    android:background="@drawable/ic_label_black_24dp"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="ID:B3"
+                    android:textSize="12sp" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/imageB3"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@drawable/bed1" />
+
+                <CheckBox
+                    android:layout_marginLeft="20dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/bedb3chk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bed is available" />
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginBottom="7.5dp"
+                android:background="#d3d3d3" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:gravity="center"
+                    android:background="@drawable/ic_label_black_24dp"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="ID:B4"
+                    android:textSize="12sp" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/imageB4"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@drawable/bed1" />
+
+                <CheckBox
+                    android:layout_marginLeft="20dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/bedb4chk"
+                    android:checked="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bed is not available" />
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginBottom="7.5dp"
+                android:background="#d3d3d3" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:gravity="center"
+                    android:background="@drawable/ic_label_black_24dp"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="ID:B5"
+                    android:textSize="12sp" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/imageB5"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@drawable/bed1" />
+
+                <CheckBox
+                    android:layout_marginLeft="20dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/bedb5chk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bed is available" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:text="ID:B5"
-                android:textColor="@android:color/background_dark"
-                android:textSize="12sp" />
-
-            <ImageView
-                android:id="@+id/imageB5"
-                android:layout_width="150dp"
-                android:layout_height="70dp"
-                android:layout_marginTop="10dp"
-                app:srcCompat="@drawable/bed1" />
-
-
-        </LinearLayout>
     </LinearLayout>
 
-
-</LinearLayout>
+</ScrollView>

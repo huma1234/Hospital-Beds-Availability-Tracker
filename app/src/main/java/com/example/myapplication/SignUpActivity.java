@@ -19,10 +19,8 @@ public class SignUpActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
-
     }
 
     public void Registered(View view) throws UnsupportedEncodingException {
@@ -40,12 +38,11 @@ public class SignUpActivity extends AppCompatActivity {
         String cnf_pwd = cpassword.getText().toString().trim();
         boolean checku,checkp=false;
         boolean excep=false;
-if(malebtn.isSelected()==false & femalebtn.isSelected()==false)
+/*if(malebtn.isSelected()==false || femalebtn.isSelected()==false)
 {
     malebtn.setError("Select Gender");
     excep=true;
-}
-
+}*/
 if(uname.length()==0)
 {
     excep=true;
@@ -104,7 +101,6 @@ if(excep==false)
 {
                 long val = db.addUser(user, pwd);
                 if (val > 0) {
-
                     Toast.makeText(SignUpActivity.this, "You have registered", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(getApplicationContext(), MainActivity.class));
                 } else {

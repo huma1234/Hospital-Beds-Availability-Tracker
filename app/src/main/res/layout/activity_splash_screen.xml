@@ -1,0 +1,28 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:layout_gravity="center"
+    android:gravity="center"
+    >
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/tracker"
+        android:padding="10dp"
+        />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hospital Bed Avalability Tracker"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20dp"
+        android:padding="10dp"
+        android:layout_below="@+id/image"
+        android:textStyle="bold"
+        android:gravity="center"/>
+</RelativeLayout>

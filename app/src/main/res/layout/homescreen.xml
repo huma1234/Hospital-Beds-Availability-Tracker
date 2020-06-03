@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/homepage"
+    android:onClick="sta"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30sp"
+        android:text="Hospital Bed Avalability Tracker"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="24sp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="100sp"
+        android:layout_marginLeft="100sp"
+        android:layout_marginTop="20sp"
+        app:srcCompat="@drawable/icon" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="130sp"
+        android:layout_marginTop="30sp"
+        android:text=" Welcome"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="24sp" />
+
+
+    <Button
+        android:id="@+id/startbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="120sp"
+        android:layout_marginTop="150sp"
+        android:background="@android:color/holo_orange_dark"
+        android:onClick="StartBtn"
+        android:text="Start"
+        android:textColor="@android:color/darker_gray" />
+
+
+</LinearLayout>
+

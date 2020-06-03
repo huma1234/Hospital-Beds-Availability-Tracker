@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="@drawable/bg2"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_gravity="left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_weight="0.5"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_account_circle_black_24dp" />
+    <TextView
+        android:layout_weight="0.5"
+        android:id="@+id/uname"
+        android:textSize="9dp"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="RabbiyaSheikh"
+        android:textColor="@color/colorPrimaryDark" />
+
+        </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="120dp"
+        android:layout_height="110dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        app:srcCompat="@drawable/tracker" />
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hospital Bed Avalability Tracker"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+    </LinearLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"/>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        >
+    <ImageView
+
+        android:layout_gravity="center_vertical"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:paddingRight="10dp"
+        android:src="@drawable/ic_fingerprint_black_24dp"/>
+
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="showECG"
+            android:textSize="24dp"
+            android:text="Show my ECG"
+            android:textColor="@color/colorPrimaryDark" />
+</LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        >
+        <ImageView
+            android:paddingRight="10dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_local_hospital_black_24dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24dp"
+            android:layout_gravity="center"
+            android:onClick="selectHospitals"
+            android:text="Select Hospital"
+            android:textColor="@color/colorPrimaryDark" />
+    </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

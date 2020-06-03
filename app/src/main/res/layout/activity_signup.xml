@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/signuplayout"
     android:layout_width="match_parent"
-
     android:layout_height="match_parent"
-    android:background="@drawable/bedimg"
+    android:background="@drawable/bg2"
     android:orientation="vertical"
     android:padding="30dp">
 
@@ -128,6 +125,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:text="Male"
+            android:textColor="@android:color/black"
             android:textSize="18dp" />
 
         <RadioButton
@@ -136,6 +134,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:text="Female"
+            android:textColor="@android:color/black"
             android:textSize="18dp" />
 
 
@@ -146,10 +145,11 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginTop="40dp"
+        android:background="@drawable/shape"
         android:onClick="Registered"
-        android:text="Register"
 
-        android:textColor="@android:color/black"
+        android:text="Register"
+        android:textColor="@android:color/white"
         android:textSize="22dp" />
 
 
